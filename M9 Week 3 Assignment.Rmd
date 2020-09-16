@@ -1,0 +1,63 @@
+---
+title: "My first Markdown Presentation"
+author: "Francisco Javier Álvarez-Vargas"
+date: "16/9/2020"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=F, message=F, warning=F)
+```
+```{r}
+library(pander)
+library(plotly)
+```
+
+## DEVELOPING DATA PRODUCTS
+### R Markdown Presentation & Plotly
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly. We would love to see you show off your creativity!
+
+### Review Criteria
+The rubric contains the following two questions:
+
+1. Is the presentation less than two months old?
+2. Is it an interactive presentation, which appears to have been created with Plotly?
+
+
+## Edgar Anderson's IRIS Data
+Iris data set gives the measurements in [cm] of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are *Iris setosa*, *I. versicolor*, and *I. virginica*.
+
+```{r iris}
+pander(summary(iris), caption="Summary for iris database")
+```
+
+## Are there differences in petals length?
+Let's look at this image, (and p-Value):
+```{r}
+plot_ly(iris, y = ~Petal.Length, color = ~Species, type = "box")
+```
+```{r}
+(kruskal.test(Petal.Length ~ Species, data=iris))$p.value
+```
+
+
+## Are there differences in sepals length?
+```{r}
+plot_ly(iris, y = ~Sepal.Length, color = ~Species, type = "box")
+```
+```{r}
+(kruskal.test(Sepal.Length ~ Species, data=iris))$p.value
+```
+
+
+## Is there a relationship between these two lengths?
+```{r}
+p <- ggplot(iris, aes(Sepal.Length, Petal.Length, 
+            color=Species)) + 
+     geom_point() +
+     geom_smooth(method="lm")
+ggplotly(p)
+```
+
