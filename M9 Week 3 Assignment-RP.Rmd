@@ -3,8 +3,8 @@ title: "My first Markdown Presentation"
 author: "Francisco Javier Álvarez-Vargas"
 date: "16/9/2020"
 output:
-  slidy_presentation: default
   ioslides_presentation: default
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}

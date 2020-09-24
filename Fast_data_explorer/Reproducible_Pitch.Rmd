@@ -1,0 +1,59 @@
+---
+title: "Fast_data_explorer"
+author: "Francisco Javier Álvarez-Vargas"
+date: "24/9/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This is a deliverable for the course Developing Data Products as part of the Coursera Data Science Specialization.
+
+
+
+
+## Overview
+
+Its main use is didactic, it allows showing how to quickly explore a database. For this, it uses different data sets preloaded in R, but it also allows the user to load their own database, in .CSV format.
+
+- Application made entirely in R
+- Mainly with the {shiny} package
+- The application is hosted on Rstudio's shiny server
+
+
+## How the App work?
+
+It consists of 4 tabs, the first with the manual on how to use it. The second tab to select the database, and view it, allowing you to filter your data. The third tab to select the variables of interest, and observe their correlations. And finally, the fourth tab to choose a variable as the response variable, observe its characteristics, and observe how each of the remaining ones would behave as predictor variables.
+
+
+## Conceptual Issues
+
+This is not a tool to be used before the statistical analysis, it is an aid in the exploratory analysis of the data.
+
+The Shiny application is available at 
+
+https://pachoalvarez.shinyapps.io/Fast_data_explorer/
+
+
+The Shiny app source code is available at 
+
+
+
+## The future
+
+Welcome all suggestions
+
+francisco.alvarez@correounivalle.edu.co
+
+```{r}
+set.seed(456)
+x <- 1:100
+y <- rnorm(100, 10, 3) + x*rnorm(100, 200, 78)
+plot(x, y)
+abline(lm(y~x), col="red")
+```
+

@@ -1,0 +1,12 @@
+name: Fast_data_explorer
+title: Fast_data_explorer
+username:
+account: pachoalvarez
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2875591
+bundleId: 3664494
+url: https://pachoalvarez.shinyapps.io/Fast_data_explorer/
+when: 1600923358.33617
+asMultiple: FALSE
+asStatic: FALSE
