@@ -41,7 +41,7 @@ https://pachoalvarez.shinyapps.io/Fast_data_explorer/
 
 The Shiny app source code is available at 
 
-
+https://github.com/PachoAlvarez/Developing-Data-Products/tree/master/Fast_data_explorer
 
 ## The future
 
